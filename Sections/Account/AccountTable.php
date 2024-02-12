@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Action</th>
+    </tr>
+    <?php 
+        include('API/Account/getAccount.php');
+        include('API/Account/deleteAccount.php');
+    ?>
+</table>
