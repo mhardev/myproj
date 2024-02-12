@@ -1,0 +1,17 @@
+Manual for deploy or insert project from XAMMP and MySQL
+
+Deploying/Inserting Project from XAMMP:
+1. Open XAMPP
+2. Click Explorer
+3. Click htdocs
+4. Insert the project 
+
+Importing Database from MySQL (XAMPP):
+1. Open XAMPP
+2. Click start Apache and MySQL
+3. Click Admin 
+4. Click "New"
+5. Click "Import" from navigation module
+6. Choose File
+7. Go to the project and select the myproj from Database folder
+8. Click "Import"
