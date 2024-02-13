@@ -4,11 +4,14 @@
     if(isset($_POST['submit'])){
         $name = $_POST['name'];
         $email = $_POST['email'];
+        $number = $_POST['number'];
+        $role = $_POST['role'];
+        $designation = $_POST['designation'];
         $password = $_POST['password'];
 
         $encrypted_password = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO account (name, email, password) VALUES ('$name', '$email', '$encrypted_password')";
+        $sql = "INSERT INTO account (name, email, number, role, designation, password) VALUES ('$name', '$email', '$number', '$role', '$designation', '$encrypted_password')";
         $result = mysqli_query($conn, $sql);
 
         if($result){
@@ -21,10 +24,9 @@
                 }).then(() => {
                     window.location.href = '" . $_SERVER['HTTP_REFERER'] . "';
                 });
-              </script>";
+            </script>";
         } else {
-            // Display SweetAlert for error
-                echo "<script>
+            echo "<script>
                 Swal.fire({
                     title: 'Error',
                     text: 'Error adding an account: " . mysqli_error($conn) . "',

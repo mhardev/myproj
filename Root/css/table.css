@@ -10,8 +10,12 @@
 tr{
     border-bottom: 1px solid #ccc;
 }
-.account-table th, td {
+.account-table th{
     padding: 10px;
     border: 1px solid #ccc;
 }
 
+.account-table td{
+    padding: 10px;
+    border: 1px solid #ccc;
+}

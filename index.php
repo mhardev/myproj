@@ -11,10 +11,14 @@
 <body>
     <h1>Simple CRUD HTML CSS PHP</h1>
     <div class="container-form">
+        <h2>Add Employee</h2>
         <form action="" method="POST">
-            <input type="text" name="name" id="name" placeholder="enter name">
-            <input type="email" name="email" id="email" placeholder="enter email">
-            <input type="password" name="password" id="password" placeholder="enter password">
+            <input type="text" name="name" id="name" placeholder="enter name" required>
+            <input type="email" name="email" id="email" placeholder="enter email" required>
+            <input type="number" name="number" id="number" min="0" max="99999999999" pattern="^\d{4}-\d{3}-\d{4}$" placeholder="enter number" required>
+            <input type="text" name="role" id="role" placeholder="enter role" required>
+            <input type="text" name="designation" id="designation" placeholder="enter designation" required>
+            <input type="password" name="password" id="password" placeholder="enter password" required>
             <input type="submit" name="submit" value="Submit">
         </form>
     </div>
