@@ -1,6 +1,5 @@
 <?php
     include(__DIR__ . '/../dbconn/dbconn.php');
-    session_start();
 
     if(isset($_POST['submit'])){
         $name = $_POST['name'];
@@ -13,11 +12,28 @@
         $result = mysqli_query($conn, $sql);
 
         if($result){
-            echo "Account created successfully";
-            header("Location: ".$_SERVER['PHP_SELF']);
-            exit();
+            echo "<script>
+                Swal.fire({
+                    title: 'Account created successfully!',
+                    icon: 'success',
+                    timer: 1500,
+                    showConfirmButton: false
+                }).then(() => {
+                    window.location.href = '" . $_SERVER['HTTP_REFERER'] . "';
+                });
+              </script>";
         } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            // Display SweetAlert for error
+                echo "<script>
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Error adding an account: " . mysqli_error($conn) . "',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                }).then(() => {
+                    window.location.href = '" . $_SERVER['HTTP_REFERER'] . "';
+                });
+            </script>";
         }
     }
 ?>

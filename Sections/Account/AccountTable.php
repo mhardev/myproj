@@ -1,4 +1,4 @@
-<table>
+<table class="account-table">
     <tr>
         <th>ID</th>
         <th>Name</th>
@@ -10,3 +10,9 @@
         include('API/Account/deleteAccount.php');
     ?>
 </table>
+
+<style>
+    .account-table th{
+        text-align: center;
+    }
+</style>

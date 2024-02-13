@@ -10,11 +10,8 @@
                     <td>" . $row['name'] . "</td>
                     <td>" . $row['email'] . "</td>
                     <td>
-                        <button onclick='openUpdateModal(" . $row['user_id'] . ", \"" . $row['name'] . "\")'>Update</button>
-                        <form action='API/Account/deleteAccount.php' method='POST'>
-                            <input type='hidden' name='id' value='" . $row['user_id'] . "'>
-                            <button type='submit' name='delete'>Delete</button>
-                        </form>
+                        <button class='btn btn-primary' onclick='openUpdateModal(" . $row['user_id'] . ", \"" . $row['name'] . "\")'>Update</button>
+                        <button class='btn btn-danger' onclick='deleteAccount(" . $row['user_id'] . ")'>Delete</button>
                     </td>
                 </tr>";
         }

@@ -10,7 +10,6 @@
         if($result){
             echo "Account deleted successfully";
             header("Location: ".$_SERVER['HTTP_REFERER']);
-            exit();
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }

@@ -1,0 +1,17 @@
+.account-table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+tr{
+    border-bottom: 1px solid #ccc;
+}
+.account-table th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
